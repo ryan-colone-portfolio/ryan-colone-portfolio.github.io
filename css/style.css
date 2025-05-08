@@ -72,7 +72,7 @@ body {
     margin-top: 40vh;
     height: 100%;
     width: 100%;
-    background-image: url('/images/headshot_crop.jpeg');
+    background-image: url('images/headshot_crop.jpeg');
     background-size: cover;
     background-position: center;
     z-index: 1;
