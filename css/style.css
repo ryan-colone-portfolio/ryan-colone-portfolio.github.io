@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #F3F0E1; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
   }
 .custom-navbar {
     background: transparent;
@@ -25,9 +29,44 @@ body {
     font-weight:
     500;
 }
-
-.hero-image img {
-    object-fit: cover;
-    height: 100vh; /* Full screen height */
+  
+  .hero-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
   }
+  
+  .hero-title {
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/headshot_crop.jpeg');
+    background-size: cover;
+    background-position: center;
+    transform: translateY(0);
+    z-index: 1;
+  }
+  
+  /* Let image scroll over text */
+  .content {
+    position: relative;
+    background: #F3F0E1;
+    padding: 4rem;
+    z-index: 3;
+  }
+  
   
