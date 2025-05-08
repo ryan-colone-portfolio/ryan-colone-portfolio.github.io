@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif;
+    font-weight: 400;
     background-color: #F3F0E1; 
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ body {
   .custom-navbar {
     background: transparent;
     padding: 1rem 2rem;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Lora', serif;
     z-index: 10;
   }
   
@@ -45,17 +46,20 @@ body {
   /* Large centered name behind image */
   .hero-title {
     position: fixed;
-    top: 15vh;
+    top: 10vh;
     width: 100%;
     text-align: center;
-    font-size: 10vw;
-    font-weight: 900;
-    color: black;
-    opacity: 0.1;
+    font-size: 15vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700; /* Bold for maximum impact */
+    color: #BF1736;
+    opacity: 0.9;
     pointer-events: none;
     z-index: 0;
-    letter-spacing: 4px;
+    letter-spacing: 10px;
   }
+  
+  
   
   /* The large image that scrolls up over the name */
   .hero-image {
