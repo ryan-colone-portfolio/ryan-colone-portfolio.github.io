@@ -6,67 +6,74 @@ body {
     height: 100%;
     overflow-x: hidden;
   }
-.custom-navbar {
+  
+  .custom-navbar {
     background: transparent;
     padding: 1rem 2rem;
     font-family: 'Helvetica Neue', sans-serif;
-}
-
-.navbar-nav .nav-link {
+    z-index: 10;
+  }
+  
+  .navbar-nav .nav-link {
     color: rgb(0, 0, 0);
     padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
     text-decoration: underline;
     color: rgb(0, 0, 0);
-}
-
-.navbar-brand {
+  }
+  
+  .navbar-brand {
     color: rgb(0, 0, 0);
     font-size: 1.25rem;
-    font-weight:
-    500;
-}
+    font-weight: 500;
+  }
   
+  /* Hero container includes title + scrolling image */
   .hero-container {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
   }
   
+  /* Large centered name behind image */
   .hero-title {
     position: fixed;
-    top: 10vh;
+    top: 15vh;
     width: 100%;
     text-align: center;
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    z-index: 2;
+    font-size: 10vw;
+    font-weight: 900;
+    color: black;
+    opacity: 0.1;
     pointer-events: none;
+    z-index: 0;
+    letter-spacing: 4px;
   }
   
+  /* The large image that scrolls up over the name */
   .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    position: relative;
+    margin-top: 40vh;
+    height: 100%;
     width: 100%;
     background-image: url('../images/headshot_crop.jpeg');
     background-size: cover;
     background-position: center;
-    transform: translateY(0);
     z-index: 1;
   }
   
-  /* Let image scroll over text */
+  /* Page content after hero section */
   .content {
     position: relative;
     background: #F3F0E1;
     padding: 4rem;
     z-index: 3;
   }
-  
   
