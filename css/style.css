@@ -1,4 +1,33 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #F3F0E1; 
+  }
+.custom-navbar {
+    background: transparent;
+    padding: 1rem 2rem;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    font-weight:
+    500;
+}
+
+.hero-image img {
+    object-fit: cover;
+    height: 100vh; /* Full screen height */
   }
   
