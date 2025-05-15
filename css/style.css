@@ -51,11 +51,13 @@ body {
   
   /* Large centered name behind image */
   .hero-title {
+    /* find a way to center this responsively */
+    left: 25px;
     position: fixed;
     top: 8vh;
     width: 100%;
     text-align: center;
-    letter-spacing: 25px;
+    letter-spacing: 0.2em;
     font-size: 15vw;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 700; /* Bold for maximum impact */
@@ -63,6 +65,7 @@ body {
     opacity: 0.9;
     pointer-events: none;
     z-index: 2;
+    justify-content: center;
   }
   
   
