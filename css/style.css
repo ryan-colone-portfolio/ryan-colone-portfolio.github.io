@@ -9,11 +9,12 @@ body {
   }
   
   .custom-navbar {
-    background: transparent;
+    background-color: #F3F0E1;  /* Off-white background */
     padding: 1rem 2rem;
     font-family: 'Lora', serif;
     z-index: 10;
   }
+  
   
   .navbar-nav .nav-link {
     color: rgb(0, 0, 0);
@@ -45,23 +46,23 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    z-index: 1;
+    z-index: 0;
   }
   
   /* Large centered name behind image */
   .hero-title {
     position: fixed;
-    top: 10vh;
+    top: 8vh;
     width: 100%;
     text-align: center;
+    letter-spacing: 25px;
     font-size: 15vw;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 700; /* Bold for maximum impact */
     color: #BF1736;
     opacity: 0.9;
     pointer-events: none;
-    z-index: 0;
-    letter-spacing: 10px;
+    z-index: 2;
   }
   
   
