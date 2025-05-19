@@ -1,7 +1,7 @@
 body {
     font-family: 'Lora', serif;
     font-weight: 400;
-    background-color: #F3F0E1; 
+    background-color: #f9f6e8; 
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9,7 +9,7 @@ body {
   }
   
   .custom-navbar {
-    background-color: #F3F0E1;  /* Off-white background */
+    background-color: #f9f6e8;  /* Off-white background */
     padding: 1rem 2rem;
     font-family: 'Lora', serif;
     z-index: 10;
@@ -34,7 +34,7 @@ body {
   }
 
   .bi {
-    color: #2AA4BF; /* any hex, rgb, or named color */
+    color: #4F697E; /* any hex, rgb, or named color */
   }
   
   
@@ -61,8 +61,7 @@ body {
     font-size: 15vw;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 700; /* Bold for maximum impact */
-    color: #BF1736;
-    opacity: 0.9;
+    color: rgba(191, 23, 54, 0.9);
     pointer-events: none;
     z-index: 2;
     justify-content: center;
@@ -86,8 +85,23 @@ body {
   /* Page content after hero section */
   .content {
     position: relative;
-    background: #F3F0E1;
+    background: #f9f6e8;
     padding: 4rem;
     z-index: 3;
+  }
+  
+  .media-section-heading {
+    font-family: 'Your Fancy Font', serif;
+    color: #c02b2b; /* red */
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .carousel img {
+    max-height: 600px;
+    object-fit: cover;
   }
   

@@ -1,32 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media - Actor Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media | Ryan Colone</title>
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/ain4zdi.css"> 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .media-section-heading {
+      font-family: "Bebas Neue", sans-serif;
+      color: rgba(191, 23, 54, 0.9);
+      text-align: center;
+      margin: 6rem 0 2.5rem 0;
+      font-size: 5rem;
+      font-weight: 700;
+      text-transform: none;
+      position: relative;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .media-section-heading::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #204060;
+      display: block;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .carousel-inner .row {
+      margin: 0;
+    }
+
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-item img:hover {
+      transform: scale(1.01);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(32, 64, 96, 0.6); /* blue tint */
+      border-radius: 50%;
+    }
+
+    body {
+      background-color: #f9f6e8;
+    }
+
+    .spacer {
+      height: 30px;
+    }
+
+    .carousel-wrapper {
+      background-color: rgba(32, 64, 96, 0.6); 
+      padding: 2rem 1rem;
+      width: 100%;
+      margin: 2rem auto;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+
+
+  </style>
 </head>
 <body>
+
   <!-- Navbar -->
-  <!-- Copy the navbar from index.html here -->
-
-  <div class="container py-5">
-    <h2 class="mb-4">Photos</h2>
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <img src="images/still1.jpg" class="img-fluid" alt="Still 1">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container-fluid justify-content-between">
+      <ul class="navbar-nav flex-row flex-grow-1 justify-content-evenly">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="headshots.html">Headshots</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link active" href="media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="text-white"><i class="bi bi-link-45deg"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-film"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
       </div>
-      <!-- Add more stills as needed -->
     </div>
+  </nav>
 
-    <h2 class="mt-5 mb-4">Clips</h2>
-    <video controls class="w-100">
-      <source src="videos/reel.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <!-- Spacer for fixed-top navbar -->
+  <div class="spacer"></div>
+
+  <!-- === Carousel Section Start === -->
+
+  <!-- Section: Show Title One -->
+  <h2 class="media-section-heading">Show Title One</h2>
+  <div class="carousel-wrapper">
+    <div id="carouselOne" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="One-1"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="One-2"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="One-3"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="One-4"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselOne" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselOne" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  
   </div>
+  
+  <!-- Section: Show Title Two -->
+  <h2 class="media-section-heading">Show Title Two</h2>
+  <div class="carousel-wrapper">
+    <div id="carouselTwo" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Two-1"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Two-2"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Two-3"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Two-4"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselTwo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselTwo" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  
 
+  <!-- Section: Show Title Three -->
+  <h2 class="media-section-heading">Show Title Three</h2>
+  <div class="carousel-wrapper">
+    <div id="carouselThree" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Three-1"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Three-2"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Three-3"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="Three-4"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselThree" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselThree" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  
+
+  <!-- Section: As You Like It -->
+  <h2 class="media-section-heading">As You Like It</h2>
+  <div class="carousel-wrapper">
+    <div id="carouselFour" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="AYLI-1"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="AYLI-2"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="AYLI-3"></div>
+            <div class="col-6"><img src="../images/AYLI.jpg" class="d-block w-100" alt="AYLI-4"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFour" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFour" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
