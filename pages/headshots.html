@@ -50,36 +50,37 @@
     }
 
     .download-block {
-    background-color: rgba(32, 64, 96, 0.6); /* homepage blue */
-    padding: 4rem 2rem;
-    color: #ffffff;
-    width: 100%;
-    margin-top: 5rem;
+        margin: 4rem 2rem 2rem 2rem;
+        padding: 0.5rem 2rem;
+        background-color: rgba(32, 64, 96, 0.6); 
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        transition: all 0.3s ease;
     }
 
-    .download-heading {
-    font-size: 2rem;
-    font-weight: 600;
 
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 1px;
+
+    .download-block:hover {
+        background-color: #111;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-download {
-    background-color: #ffffff;
-    color: rgba(191, 23, 54, 0.9);
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2rem;
-    }
+    .download-text {
+        flex: 2;
+        text-align: left;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4rem;
+        color: #fff;
+        }
 
-    .btn-download:hover {
-    background-color: #f0f0f0;
-    color: #163a5a;
+    .download-icon {
+        flex: 1;
+        text-align: right;
+        font-size: 4rem;
+        color: #fff;
     }
 
 
@@ -126,12 +127,18 @@
   </div>
 
   <!-- Download Button -->
+  <!-- Download Section -->
   <section class="download-block">
-    <div class="container text-center">
-      <!-- <h2 class="download-heading">Download All Headshots</h2> -->
-      <a href="../downloads/ryan-colone-headshots.zip" class="btn-download" download>Download All Headshots</a>
+    <div class="download-text">Download Zip File</div>
+    <div class="download-icon">
+      <a href="../downloads/ryan-colone-headshots.zip" download style="color: inherit; text-decoration: none;">
+        <i class="bi bi-download"></i>
+      </a>
     </div>
   </section>
+  
+  
+  
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
