@@ -89,7 +89,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgba(32, 64, 96, 0.1); /* soft blue tint */
+    background-color: #f9f6e8; /* soft blue tint */
     padding: 3rem 0;
     border-radius: 12px;
 
@@ -112,7 +112,7 @@ body {
   }
   
   .see-now-subtitle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 1.5rem;
     color: #333;
     margin: 0 auto;
