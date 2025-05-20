@@ -83,25 +83,106 @@ body {
   }
   
   /* Page content after hero section */
-  .content {
-    position: relative;
-    background: #f9f6e8;
-    padding: 4rem;
-    z-index: 3;
+
+  
+  .see-now-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(32, 64, 96, 0.1); /* soft blue tint */
+    padding: 3rem 0;
+    border-radius: 12px;
+
   }
   
-  .media-section-heading {
-    font-family: 'Your Fancy Font', serif;
-    color: #c02b2b; /* red */
+  .see-now-text {
+    flex: 3;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin: 4rem 0 2rem 0;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
   
-  .carousel img {
-    max-height: 600px;
-    object-fit: cover;
+  .see-now-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8rem;
+    color: rgba(32, 64, 96, 0.6); 
+    margin-bottom: 1rem;
+  }
+  
+  .see-now-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 auto;
+  }
+  
+  .see-now-image {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px; /* 👈 Alternative way */
+  }
+  
+  .show-promo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  
+  .show-promo-img:hover {
+    transform: scale(1.03);
+  }
+  
+  @media (max-width: 1024px) {
+    .see-now-container {
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
+  
+    .see-now-text,
+    .see-now-image {
+      width: 100%;
+      padding: 1rem 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .see-now-title {
+      font-size: 5rem;
+    }
+  
+    .see-now-subtitle {
+      font-size: 1.3rem;
+      padding: 0 1rem;
+    }
+  
+    .show-promo-img {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .see-now-title {
+      font-size: 3.2rem;
+    }
+  
+    .see-now-subtitle {
+      font-size: 1.1rem;
+    }
+  
+    .show-promo-img {
+      max-width: 100%;
+    }
+  
+    .see-now-image {
+      padding-right: 0;
+    }
   }
   
