@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
       const opacity = Math.max(0.7, 0.45 + (imageTop / 200) * 0.45);
       title.style.opacity = opacity;
     } else {
-      title.style.opacity = 0.9;
+      title.style.opacity = 1;
     }
   });
   
