@@ -12,7 +12,7 @@ body {
     background-color: #f9f6e8;  /* Off-white background */
     padding: 1rem 2rem;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 17px;;
+    font-size: 19px;
     z-index: 10;
   }
   
@@ -35,7 +35,7 @@ body {
   }
 
   .bi {
-    color: #4F697E; /* any hex, rgb, or named color */
+    color: #000; /* any hex, rgb, or named color */
   }
   
   
