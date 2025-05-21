@@ -103,7 +103,15 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
   }
+  .see-now-text.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   
   .see-now-title {
     font-family: "Bebas Neue", sans-serif;
