@@ -31,7 +31,7 @@
 
     /* ────── Text box ────── */
     .text-box {
-      flex: 1;
+      flex: 2;
       min-width: 300px;
       
       padding: 2rem;
@@ -52,11 +52,11 @@
 
     /* ────── Image box ────── */
     .image-box {
-      flex: 1;
+      flex: 3;
       min-width: 300px;
       position: relative;
       /* keep same square aspect ratio as before */
-      height: 0;
+
       padding-bottom: 70%;
       background: rgba(32, 64, 96, 0.6);
     }
@@ -80,27 +80,35 @@
       top: 3%; left: 30%; transform: rotate(-6deg);
     }
     .photo-album .img2 {
-      top: 28%; left: 5%; transform: rotate(0deg);
+      top: 30%; left: 5%; transform: rotate(0deg);
     }
     .photo-album .img3 {
-      top: 50%; left: 30%; transform: rotate(+3deg);
+      top: 60%; left: 30%; transform: rotate(+3deg);
     }
 
-    @media (max-width: 900px) {
+
+    @media (max-width: 1200px) {
       .about-container {
         flex-direction: column;
         padding: 2rem 1rem;
+
       }
       .image-box {
         padding-bottom: 75%;
       }
+      
+  
     }
+    
     .space1{
       padding-top: 50px;
     }
     .space2{
       padding-top: 10px;
     }
+    
+
+
   </style>
 </head>
 <body>
