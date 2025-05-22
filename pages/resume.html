@@ -30,6 +30,8 @@
       font-family: 'Lora', serif;
       color: #111;
       padding-top: 30px;
+      margin: 0;
+      padding-bottom: 4rem; /* space for fixed footer */
     }
 
     .resume-section {
@@ -47,54 +49,50 @@
       border-radius: 8px;
     }
 
-    /* === copied from headshots page === */
-    .download-block {
+    /* === same discreet footer from headshots === */
+    .download-block2 {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(32,64,96,0.15);
+      backdrop-filter: blur(8px);
       display: flex;
-      justify-content: space-between; /* text on left, button on right */
-      align-items: center;            /* vertical centering */
-      margin-top: 4rem;
-      background-color: rgba(32, 64, 96, 0.6);
-      padding: 0rem 2rem;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
-    .download-block .download-text {
+    .download-block2 .download-text {
       font-family: "Bebas Neue", sans-serif;
-      font-size: 2.5rem;
+      font-size: 1.2rem;
+      color: rgba(32,64,96,0.8);
+      margin: 0;
+    }
+    .download-block2 .download-btn-all {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1rem;
       color: #fff;
-      flex-shrink: 0;
-    }
-    .download-block .download-btn {
-      background-color: #fff;
-      color: rgba(32, 64, 96, 1);
-      text-decoration: none;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: 1.5rem;
-      padding: 0.5rem 1.25rem;
+      background-color: rgba(32,64,96,0.8);
+      padding: 0.4rem 1rem;
       border-radius: 4px;
+      text-decoration: none;
       transition: background-color 0.2s ease;
     }
-    .download-block .download-btn:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transform: scale(1.015);
-      background-color: rgba(191, 23, 54, 0.9);
-      color: #fff;
+    .download-block2 .download-btn-all:hover {
+      background-color: rgba(32,64,96,1);
+    }
+    @media (max-width: 768px) {
+      .download-block2 {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .download-block2 .download-text {
+        font-size: 1rem;
+      }
     }
     /* ================================ */
-
-    @media (max-width: 768px) {
-      .resume-section {
-        padding: 0 1rem;
-      }
-      .download-block {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-      }
-      .download-block .download-btn {
-        font-size: 1.25rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -129,15 +127,15 @@
     />
   </section>
 
-  <!-- Download Resume -->
-  <section class="download-block">
+  <!-- Discreet Fixed Download Resume Bar -->
+  <div class="download-block2">
     <span class="download-text">Download Resume</span>
     <a
       href="../downloads/ryan-colone-resume.pdf"
       download
-      class="download-btn"
+      class="download-btn-all"
     >Resume.pdf</a>
-  </section>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
