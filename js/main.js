@@ -14,3 +14,18 @@ window.addEventListener('scroll', () => {
     }
   });
   
+  /* See me now in slide */
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+  
+    const textEl = document.querySelector('.see-now-text');
+    if (textEl) observer.observe(textEl);
+  });
+  

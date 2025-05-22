@@ -88,110 +88,71 @@ body {
   
   .see-now-container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    background-color: #f9f6e8; /* soft blue tint */
-    padding: 3rem 0;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    background-color: #f9f6e8;
     border-radius: 12px;
-
   }
   
   .see-now-text {
-    flex: 3;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    flex: 5;
     opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease-out;
-  }
-  .see-now-text.reveal {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    text-align: left;
   }
   
+  .see-now-text.reveal {
+    opacity: 1;
+    transform: translateX(0);
+  }
   
   .see-now-title {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 8rem;
-    color: rgba(32, 64, 96, 0.6); 
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: rgba(191, 23, 54, 0.9);
+    margin: 0 0 1rem;
   }
   
   .see-now-subtitle {
     font-family: "Bebas Neue", sans-serif;
     font-size: 1.5rem;
     color: #333;
-    margin: 0 auto;
+    margin: 0;
   }
   
   .see-now-image {
-    flex: 3;
+    flex: 2;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 40px; /* 👈 Alternative way */
   }
   
   .show-promo-img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    
   }
-  
-  
   .show-promo-img:hover {
     transform: scale(1.03);
   }
   
-  @media (max-width: 1024px) {
+  /* Responsive */
+  @media (max-width: 900px) {
     .see-now-container {
       flex-direction: column;
-      padding: 2rem 1rem;
-    }
-  
-    .see-now-text,
-    .see-now-image {
-      width: 100%;
-      padding: 1rem 0;
-      justify-content: center;
       text-align: center;
     }
-  
-    .see-now-title {
-      font-size: 5rem;
+    .see-now-text {
+      transform: translateX(0);
+      opacity: 1;
     }
-  
-    .see-now-subtitle {
-      font-size: 1.3rem;
-      padding: 0 1rem;
-    }
-  
-    .show-promo-img {
-      max-width: 80%;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .see-now-title {
-      font-size: 3.2rem;
-    }
-  
-    .see-now-subtitle {
-      font-size: 1.1rem;
-    }
-  
-    .show-promo-img {
-      max-width: 100%;
-    }
-  
     .see-now-image {
-      padding-right: 0;
+      justify-content: center;
+      margin-top: 2rem;
     }
+    .see-now-subtitle { padding: 0 1rem; }
   }
   
