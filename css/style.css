@@ -144,9 +144,9 @@ body {
   }
   
 }
-@media (max-width: 600px){
+@media (max-width: 400px){
   .hero-title {
-    top: 12vh; /* Shift it further down visually */
+    top: 14vh; /* Shift it further down visually */
   }
 }
 
