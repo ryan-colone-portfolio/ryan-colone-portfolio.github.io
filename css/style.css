@@ -125,7 +125,7 @@ body {
   .see-now-image {
     flex: 2;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
   
   .show-promo-img {
