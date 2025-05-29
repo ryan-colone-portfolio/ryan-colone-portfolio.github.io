@@ -59,6 +59,13 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .hero-title {
+    top: 18vh; /* Move it further down for better centering */
+  }
+}
+
+
 
 .hero-container {
   position: relative;
