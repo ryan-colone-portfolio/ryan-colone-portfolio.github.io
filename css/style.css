@@ -73,20 +73,22 @@ body {
 }
 
 .hero-title {
-  position: fixed;
-  top: 10vh;
+  position: sticky;
+  top: 10vh;               /* starts 10% from top of viewport */
   left: 0;
   width: 100%;
   padding: 0 1rem;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 15vw; /* Full size on large screens */
+  font-size: 15vw;
   letter-spacing: 0.2em;
   color: rgba(191, 23, 54, 0.9);
   pointer-events: none;
   z-index: 2;
 }
+
+
 
 /* Responsive title scaling */
 @media (max-width: 1200px) {
@@ -113,7 +115,7 @@ body {
 
 @media (max-width: 600px) {
   .hero-title {
-    top: 18vh;
+    top: 10vh;
     font-size: 11vw;         /* Smaller font to fit full name */
     white-space: nowrap;     /* Prevent line break */
   }
@@ -149,7 +151,7 @@ body {
 
 
 .hero-image {
-  margin-top: clamp(30vh, 40vh, 45vh);
+  margin-top: 15vh;
   height: 100%;
   width: 100%;
   background-image: url('../images/headshot_crop.jpeg');
