@@ -74,7 +74,7 @@ body {
 
 .hero-title {
   position: sticky;
-  top: 10vh;               /* starts 10% from top of viewport */
+  top: 12vh;               /* starts 10% from top of viewport */
   left: 0;
   width: 100%;
   padding: 0 1rem;
@@ -93,7 +93,7 @@ body {
 /* Responsive title scaling */
 @media (max-width: 1200px) {
   .hero-title {
-    top: 10vh;
+    top: 12vh;
     font-size: 14vw;
   }
 
@@ -104,7 +104,7 @@ body {
 
 @media (max-width: 800px) {
   .hero-title {
-    top: 10vh;
+    top: 12vh;
     font-size: 14vw;
   }
 
@@ -115,9 +115,12 @@ body {
 
 @media (max-width: 600px) {
   .hero-title {
-    top: 10vh;
+    top: 12vh;
     font-size: 11vw;         /* Smaller font to fit full name */
     white-space: nowrap;     /* Prevent line break */
+  }
+  .hero-image {
+    margin-top: 32vh;
   }
 
   .see-now-container {
@@ -138,7 +141,7 @@ body {
   }
 
   .see-now-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .see-now-subtitle {
