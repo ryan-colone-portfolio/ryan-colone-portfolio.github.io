@@ -75,7 +75,7 @@ body {
 .hero-title {
   position: fixed;
   top: 10vh;
-  left: 20px;
+  left: 0;
   width: 100%;
   padding: 0 1rem;
   text-align: center;
@@ -93,7 +93,6 @@ body {
   .hero-title {
     top: 10vh;
     font-size: 14vw;
-    left: 0px;
   }
 
   .hero-image {
@@ -105,7 +104,6 @@ body {
   .hero-title {
     top: 10vh;
     font-size: 14vw;
-    left: 0px;
   }
 
   .hero-image {
@@ -115,12 +113,10 @@ body {
 
 @media (max-width: 600px) {
   .hero-title {
-    top: 10vh;
-    font-size: 11vw;  
-    left: 0px;       /* Smaller font to fit full name */
+    top: 18vh;
+    font-size: 11vw;         /* Smaller font to fit full name */
     white-space: nowrap;     /* Prevent line break */
   }
-
 
   .see-now-container {
     flex-direction: column;
@@ -140,7 +136,7 @@ body {
   }
 
   .see-now-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .see-now-subtitle {
