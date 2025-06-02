@@ -74,8 +74,8 @@ body {
 
 .hero-title {
   position: sticky;
-  top: 12vh;               /* starts 10% from top of viewport */
-  left: 0;
+  top: 12vh;               
+  left: 0px;
   width: 100%;
   padding: 0 1rem;
   text-align: center;
@@ -87,6 +87,8 @@ body {
   pointer-events: none;
   z-index: 2;
 }
+
+
 
 
 
@@ -111,6 +113,7 @@ body {
   .hero-image {
     margin-top: 32vh;
   }
+  
 }
 
 @media (max-width: 600px) {
