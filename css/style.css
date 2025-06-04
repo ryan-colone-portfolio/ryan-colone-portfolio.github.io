@@ -1,7 +1,6 @@
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -73,6 +72,7 @@ body {
   height: 150vh;
   display: flex;
   flex-direction: column;
+  
   justify-content: flex-start;
   align-items: center;
   z-index: 0;
