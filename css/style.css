@@ -1,7 +1,4 @@
 
-html, body {
-  max-width: 100%;
-}
 
 body {
   font-family: 'Lora', serif;
@@ -102,7 +99,7 @@ body {
 @media (max-width: 1200px) {
   .hero-title {
     top: 12vh;
-    font-size: 14vw;
+    font-size: 15vw;
   }
 
   .hero-image {
@@ -113,7 +110,7 @@ body {
 @media (max-width: 800px) {
   .hero-title {
     top: 12vh;
-    font-size: 14vw;
+    font-size: 14.5vw;
   }
 
   .hero-image {
