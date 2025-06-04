@@ -125,7 +125,7 @@ body {
 @media (max-width: 600px) {
   .hero-title {
     top: 12vh;
-    font-size: 13.5vw;         /* Smaller font to fit full name */
+    font-size: 14vw;         /* Smaller font to fit full name */
     white-space: nowrap;     /* Prevent line break */
   }
   .hero-image {
