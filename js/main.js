@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
   
     // Fade from 0.9 (full) to 0.45 (half) as image approaches
     if (imageTop < 200) {
-      const opacity = Math.max(0.7, 0.45 + (imageTop / 200) * 0.45);
+      const opacity = Math.max(0.7, 0.5 + (imageTop / 200) * 05);
       title.style.opacity = opacity;
     } else {
       title.style.opacity = 1;
