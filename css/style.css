@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -77,20 +75,22 @@ body {
 
 .hero-title {
   position: sticky;
-  top: 12vh;               
-  left: 0px;
-  width: 100%;
-  padding: 0 1rem;
-  text-align: center;
+  top: 12vh;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 15vw;
-  letter-spacing: 0.2em;
   color: rgba(191, 23, 54, 0.9);
   pointer-events: none;
   z-index: 2;
+  width: 100%;
+  text-align: center; /* base centering */
 }
 
+.hero-title .title-text {
+  display: inline-block;          /* shrink-wrap to text width */
+  letter-spacing: 0.2em;          /* your desired spacing */
+  transform: translateX(0.09em); /* adjust this value until edges match */
+}
 
 
 
@@ -170,6 +170,7 @@ body {
   position: relative;
 }
 
+/* ===== EXISTING See Me Now styles (unchanged) ===== */
 .see-now-container {
   display: flex;
   align-items: center;
@@ -180,7 +181,7 @@ body {
 }
 
 .see-now-text {
-  flex: 5;
+  flex: 3;
   opacity: 0;
   transform: translateX(100px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -194,14 +195,13 @@ body {
 
 .see-now-title {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   color: rgba(191, 23, 54, 0.9);
-  margin: 0 0 1rem;
 }
 
 .see-now-subtitle {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
   color: #333;
   margin: 0;
 }
@@ -224,3 +224,69 @@ body {
   transform: scale(1.03);
 }
 
+/* ===== NEW: Bottom split layout + Press panel (keeps existing styles) ===== */
+.bottom-split {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Make the left card (existing see-now-container) take one column in the split */
+.bottom-split .see-now-container {
+  flex: 1;
+}
+
+/* Right side press panel */
+.press-container {
+  flex: 1;
+  background-color: #f9f6e8;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.press-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  color: rgba(191, 23, 54, 0.9);
+}
+
+.press-blurb {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+}
+
+.press-link {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.press-link:hover,
+.press-link:focus {
+  color: rgba(191, 23, 54, 0.9);
+  outline: none;
+}
+
+/* Stack the two panels on smaller screens while preserving your existing mobile styles */
+@media (max-width: 900px) {
+  .bottom-split {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .press-title {
+    font-size: 2.25rem;
+  }
+}
