@@ -176,15 +176,27 @@ body {
   padding: 2rem;
   background-color: #f9f6e8;
   border-radius: 12px;
+
+  /* ensure columns have equal height so centering has space to work */
+  align-items: stretch;
 }
 
 .see-now-text {
   flex: 3;
+
+  /* turn it into a flex column and center its contents vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical centering inside the text box */
+  align-self: stretch;       /* make this column as tall as the row */
+
+  /* your existing styles */
   opacity: 0;
   transform: translateX(100px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   text-align: left;
 }
+
 
 .see-now-text.reveal {
   opacity: 1;
