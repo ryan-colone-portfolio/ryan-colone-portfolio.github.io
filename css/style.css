@@ -359,10 +359,12 @@ body {
 
   .see-card__content {
     padding: 1rem;
+    gap: 0rem;
   }
 
   .press-card__content {
     padding: 1rem 1rem;
+    gap: 0.25rem;
   }
 
   .see-card__blurb,
