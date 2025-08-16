@@ -83,13 +83,13 @@ body {
   pointer-events: none;
   z-index: 2;
   width: 100%;
-  text-align: center; /* base centering */
+  text-align: center;
 }
 
 .hero-title .title-text {
-  display: inline-block;          /* shrink-wrap to text width */
-  letter-spacing: 0.2em;          /* your desired spacing */
-  transform: translateX(0.09em); /* adjust this value until edges match */
+  display: inline-block; 
+  letter-spacing: 0.2em;
+  transform: translateX(0.09em);
 }
 
 
@@ -129,33 +129,7 @@ body {
     margin-top: 32vh;
   }
 
-  .see-now-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .see-now-text {
-    order: 1;
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .see-now-image {
-    order: 2;
-    margin-top: 1.5rem;
-    justify-content: center;
-  }
-
-  .see-now-title {
-    font-size: 2rem;
-  }
-
-  .see-now-subtitle {
-    font-size: 1.2rem;
-  }
 }
-
-
 
 
 .hero-image {
@@ -169,70 +143,88 @@ body {
   position: relative;
 }
 
-/* ===== EXISTING See Me Now styles (unchanged) ===== */
-.see-now-container {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #f9f6e8;
+.see-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
   border-radius: 12px;
-
-  /* ensure columns have equal height so centering has space to work */
-  align-items: stretch;
 }
 
-.see-now-text {
-  flex: 3;
+.see-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
 
-  /* turn it into a flex column and center its contents vertically */
+/* Background image */
+.see-card__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/still2.png');
+  background-size: cover;
+  background-position: left bottom;
+  transform-origin: left bottom;
+  will-change: transform; 
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+
+/* Top-right text placement (mirrors press card) */
+.see-card__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical centering inside the text box */
-  align-self: stretch;       /* make this column as tall as the row */
-
-  /* your existing styles */
-  opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  text-align: left;
+  justify-content: flex-start;   /* top */
+  align-items: flex-end;         /* right */
+  text-align: right;
+  gap: 0.5rem;
+  color: #fff;
 }
 
-
-.see-now-text.reveal {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.see-now-title {
+/* Typography matches your site */
+.see-card__title {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
-  color: rgba(191, 23, 54, 0.9);
-}
-
-.see-now-subtitle {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
   margin: 0;
+  color: rgba(191, 23, 54, 0.9);
+  letter-spacing: 0.02em;
 }
 
-.see-now-image {
-  flex: 2;
-  display: flex;
-  justify-content: center;
+.see-card__blurb {
+  font-family: 'Lora', serif;
+  font-size: 1.125rem;
+  margin: 0;
+  color: rgba(255,255,255,0.92);
 }
-
-.show-promo-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.show-promo-img:hover {
+.see-card-link:hover .see-card__bg,
+.see-card-link:focus .see-card__bg {
   transform: scale(1.03);
 }
+.see-card-link:focus {
+  outline: 3px solid rgba(191, 23, 54, 0.9);
+  outline-offset: 3px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .see-card { min-height: 320px; }
+  .see-card__title { font-size: 2.4rem; }
+}
+@media (max-width: 600px) {
+  .see-card { min-height: 280px; }
+  .see-card__title { font-size: 2rem; }
+  .see-card__blurb { font-size: 1rem; }
+  
+}
+
 
 /* ===== NEW: Bottom split layout + Press panel (keeps existing styles) ===== */
 .bottom-split {
@@ -243,60 +235,131 @@ body {
   width: 100%;
 }
 
-/* Make the left card (existing see-now-container) take one column in the split */
-.bottom-split .see-now-container {
-  flex: 1;
+
+/* Image content box with overlay */
+.press-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 360px;   
+  background-color: #000;    
+  box-shadow: 0 8px 16px rgba(0,0,0,0.10);
 }
 
-/* Right side press panel */
-.press-container {
-  flex: 1;
-  background-color: #f9f6e8;
-  border-radius: 12px;
-  padding: 2rem;
+
+.press-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Background image */
+.press-card__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/still1.avif');
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+/* Dark overlay for contrast */
+.press-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7) 0%,    /* very dark at the bottom edge */
+    rgba(0,0,0,0.7) 15%,
+    rgba(0,0,0,0.7) 35%,
+    rgba(0,0,0,0.32) 55%,
+    rgba(0,0,0,0.00) 75%,   /* top quarter basically clear */
+    rgba(0,0,0,0.00) 100%
+  );
+  pointer-events: none; 
+}
+
+/* Text content */
+.press-card__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 1.75rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  color: #fff;
 }
 
-.press-title {
+.press-card__title {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3rem;
+  font-weight: 600;
   line-height: 1;
   margin: 0;
-  color: rgba(191, 23, 54, 0.9);
+  color: rgba(191, 23, 54, 1);
+  letter-spacing: 0.02em;
 }
 
-.press-blurb {
+.press-card__blurb {
   font-family: 'Lora', serif;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0;
-  color: #333;
+  color: rgba(255,255,255,0.92);
 }
 
-.press-link {
+.press-card__cta {
   font-family: 'Lora', serif;
   font-weight: 700;
   text-decoration: underline;
-  font-size: 1.1rem;
-  color: #000;
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.98);
 }
 
-.press-link:hover,
-.press-link:focus {
-  color: rgba(191, 23, 54, 0.9);
-  outline: none;
+/* Hover/Focus effects */
+.press-card-link:hover .press-card__bg,
+.press-card-link:focus .press-card__bg {
+  transform: scale(1.03);
+}
+.press-card-link:focus {
+  outline: 3px solid rgba(191, 23, 54, 0.9); 
+  outline-offset: 3px;
 }
 
-/* Stack the two panels on smaller screens while preserving your existing mobile styles */
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .press-card { min-height: 320px; }
+  .press-card__title { font-size: 2.4rem; }
+}
+@media (max-width: 600px) {
+  .press-card { min-height: 280px; }
+  .press-card__title { font-size: 2rem; }
+  .press-card__blurb,
+  .press-card__cta { font-size: 1rem; }
+}
+
+/* --- Bottom split width tweak: make See Now narrower, Press wider --- */
+.bottom-split .see-card {
+  flex: 0 1 58%; 
+  min-width: 0; 
+}
+
+.bottom-split .press-card {
+  flex: 1 1 42%;
+  min-width: 0;
+}
+
+/* Stack full width on smaller screens */
 @media (max-width: 900px) {
   .bottom-split {
     flex-direction: column;
-    padding: 1.5rem;
   }
-
-  .press-title {
-    font-size: 2.25rem;
+  .bottom-split .see-card,
+  .bottom-split .press-card {
+    flex: 1 1 auto;
   }
 }

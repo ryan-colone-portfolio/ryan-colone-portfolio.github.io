@@ -60,28 +60,34 @@
 
   <!-- Bottom split: See Me Now + Press -->
 <section class="bottom-split">
-  <!-- LEFT: See Me Now -->
-  <section class="see-now-container">
-    <div class="see-now-text">
-      <h2 class="see-now-title">See Me Now In...</h2>
-      <p class="see-now-subtitle">Click the image for showtimes.</p>
+  <!-- LEFT: See Me Now (match press style) -->
+<aside class="see-card" aria-labelledby="see-title">
+  <a class="see-card-link" target="_blank" rel="noopener"
+     href="https://studioseaview.com/show/angry-alan/">
+    <div class="see-card__bg" role="img" aria-label="See Me Now: Angry Alan"></div>
+    <div class="see-card__overlay"></div>
+    <div class="see-card__content">
+      <h2 id="see-title" class="see-card__title">See Me Now In</h2>
+      <p class="see-card__blurb">Click for showtimes.</p>
     </div>
-    <div class="see-now-image">
-      <a href="https://studioseaview.com/show/angry-alan/" target="_blank" rel="noopener">
-        <img src="images/AA_MASTER_LS.png" alt="Current show: Angry Alan at Studio Seaview" class="show-promo-img">
-      </a>
-    </div>
-  </section>
+  </a>
+</aside>
+
 
   <!-- RIGHT: Press -->
-  <aside class="press-container" aria-labelledby="press-title">
-    <h2 id="press-title" class="press-title">Ryan in the Press</h2>
-    <p class="press-blurb">BroadwayWorld chats with Ryan about <em>ANGRY ALAN</em>.</p>
-    <a class="press-link" target="_blank" rel="noopener"
+  <aside class="press-card" aria-labelledby="press-title">
+    <a class="press-card-link" target="_blank" rel="noopener"
        href="https://www.broadwayworld.com/article/Interview-Ryan-Colone-is-ANGRY-ALANs-On-Stage-Surprise-20250728">
-      Read the BroadwayWorld interview →
+      <div class="press-card__bg" role="img" aria-label="Ryan in the Press"></div>
+      <div class="press-card__overlay"></div>
+      <div class="press-card__content">
+        <h2 id="press-title" class="press-card__title">Ryan in the Press</h2>
+        <p class="press-card__blurb">BroadwayWorld chats with Ryan about <em>ANGRY ALAN</em>.</p>
+        <span class="press-card__cta">Read the BroadwayWorld interview →</span>
+      </div>
     </a>
   </aside>
+  
 </section>
 
   
