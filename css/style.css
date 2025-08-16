@@ -209,9 +209,9 @@ body {
 /* ===== NEW: Bottom split layout + Press panel (keeps existing styles) ===== */
 .bottom-split {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: stretch;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
 }
 
