@@ -340,6 +340,15 @@ body {
 }
 
 @media (max-width: 600px) {
+
+  .see-card__content {
+    padding: 1rem;
+  }
+
+  .press-card__content {
+    padding: 1rem 1rem;
+  }
+
   .see-card__title,
   .press-card__title { font-size: 2rem; }
 
