@@ -156,14 +156,14 @@ body {
 
 .see-card__bg {
   position: absolute;
-  inset: -5px;                     /* overdraw kills the gap */
+  inset: 0;                     /* overdraw kills the gap */
   border-radius: inherit;          /* match the rounded corners */
   background-image: linear-gradient(
     to left,
     rgba(255, 255, 255, 0.15) 0%,
     rgba(255, 255, 255, 0.1) 25%,
     rgba(255, 255, 255, 0.00) 70%
-  ), url('/images/still2.png');
+  ), url('/images/still5.png');
   
   background-size: cover;
   background-position: left bottom;
@@ -197,7 +197,7 @@ body {
 /* Typography matches your site */
 .see-card__title {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 4rem;
+
   font-size: clamp(3rem, 4rem, 5rem);
   font-weight: 600;
   line-height: 1;
