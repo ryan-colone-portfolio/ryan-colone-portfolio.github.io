@@ -187,6 +187,7 @@ body {
 .see-card__title {
   font-family: "Bebas Neue", sans-serif;
   font-size: 4rem;
+  font-size: clamp(3rem, 4rem, 5rem);
   font-weight: 600;
   line-height: 1;
   margin: 0;
@@ -335,11 +336,26 @@ body {
     transform-origin: left bottom;
   }
 
-  .see-card__title,
-  .press-card__title { font-size: 2.4rem; }
+
 }
 
 @media (max-width: 600px) {
+
+  .see-card__blurb,
+  .press-card__blurb,
+  .press-card__cta { font-size: 1rem; }
+
+  .see-card-link:hover .see-card__bg,
+  .press-card-link:hover .press-card__bg { transform: none; }
+
+  .see-card__title { font-size: 3rem; }
+  .see-card__blurb {font-size: 1rem;}
+  .press-card__title { font-size: 3rem; }
+  .press-card__blurb, .press-card__cta {font-size: 1rem; }
+
+}
+
+@media (max-width: 475px) {
 
   .see-card__content {
     padding: 1rem;
@@ -349,13 +365,16 @@ body {
     padding: 1rem 1rem;
   }
 
-  .see-card__title,
-  .press-card__title { font-size: 2rem; }
-
   .see-card__blurb,
   .press-card__blurb,
   .press-card__cta { font-size: 1rem; }
 
   .see-card-link:hover .see-card__bg,
   .press-card-link:hover .press-card__bg { transform: none; }
+
+  .see-card__title { font-size: 2rem; }
+  .see-card__blurb {font-size: 0.75rem;}
+  .press-card__title { font-size: 2rem; }
+  .press-card__blurb, .press-card__cta {font-size: 0.75rem; }
+
 }
