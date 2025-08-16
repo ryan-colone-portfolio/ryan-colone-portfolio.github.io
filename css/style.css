@@ -142,8 +142,8 @@ body {
 .see-card {
   position: relative;
   overflow: hidden;
-  background-color: #000;
   border-radius: 12px;
+  background-color: #000;
 }
 
 .see-card-link {
@@ -154,18 +154,29 @@ body {
   position: relative;
 }
 
-/* Background image */
 .see-card__bg {
   position: absolute;
-  inset: 0;
-  background-image: url('/images/still2.png');
+  inset: -5px;                     /* overdraw kills the gap */
+  border-radius: inherit;          /* match the rounded corners */
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.00) 70%
+  ), url('/images/still2.png');
+  
   background-size: cover;
   background-position: left bottom;
+
+  /* keep BL anchored and avoid compositing seams */
   transform-origin: left bottom;
-  will-change: transform; 
-  transform: scale(1);
+  transform: translateZ(0) scale(1); /* promote to GPU layer */
+  backface-visibility: hidden;
+
+  will-change: transform;
   transition: transform 0.4s ease;
 }
+
 
 
 /* Top-right text placement (mirrors press card) */
