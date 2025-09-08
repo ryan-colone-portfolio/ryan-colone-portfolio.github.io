@@ -158,12 +158,7 @@ body {
   position: absolute;
   inset: 0;                     /* overdraw kills the gap */
   border-radius: inherit;          /* match the rounded corners */
-  background-image: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(255, 255, 255, 0.00) 70%
-  ), url('/images/still5.png');
+  background-image:  url('/images/still5.png');
   
   background-size: cover;
   background-position: left bottom;
@@ -202,7 +197,7 @@ body {
   font-weight: 600;
   line-height: 1;
   margin: 0;
-  color: rgba(191, 23, 54, 0.9);
+  color: #f9f6e8;
   letter-spacing: 0.02em;
 }
 
@@ -291,7 +286,7 @@ body {
   font-weight: 600;
   line-height: 1;
   margin: 0;
-  color: rgba(191, 23, 54, 1);
+  color: #f9f6e8;
   letter-spacing: 0.02em;
 }
 
