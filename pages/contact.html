@@ -50,7 +50,7 @@
 
     /* left column with smoother gradient start halfway */
     .contact-info {
-      flex: 1;
+      flex: 0 0 60%;
       padding: 3rem;
       padding-top: 100px;
       display: flex;
@@ -72,6 +72,23 @@
       color: rgba(191,23,54,0.9);
       margin-bottom: 1rem;
     }
+    
+    .contact-columns {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-end;
+    }
+    
+    .contact-column {
+      flex: 1;
+    }
+    
+    .contact-column:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
     .contact-info .group {
       font-weight: 700;
       margin: 1.5rem 0 .5rem;
@@ -120,9 +137,20 @@
       .contact-info {
         padding: 2rem;
         padding-top: 80px;
+        padding-bottom: 3rem;
       }
       .contact-info h2 {
         font-size: 4rem;
+      }
+      .contact-columns {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+      }
+      
+      .contact-column:last-child {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -160,24 +188,35 @@
     <!-- Info Column -->
     <div class="contact-info">
       <h2>Contact</h2>
-      <div class="group">Ryan Colone</div>
-      <a href="mailto:ryancolone59@gmail.com">ryancolone59@gmail.com</a>
       
-      <div class="group">Agent David Krasner</div>
-      <a href="mailto:dkrasner@hendersonhogan.com">dkrasner@hendersonhogan.com</a>
-      
-      <div class="group">Agent Alex Butler</div>
-      <a href="mailto:abutler@hendersonhogan.com">abutler@hendersonhogan.com</a>
-      
-      <div class="group">Agency Assistant Annie Stein</div>
-      <a href="mailto:astein@hendersonhogan.com">astein@hendersonhogan.com</a>
-      
-      <div class="group">Benjamin Carnegie</div>
-      <a href="mailto:bcarnegie@luberroklin.com">bcarnegie@luberroklin.com</a>
-      
-      <div class="group">Jonathan Grace</div>
-      <a href="mailto:jgrace@luberroklin.com">jgrace@luberroklin.com</a>
-      
+      <div class="contact-columns">
+        <!-- Left Column -->
+        <div class="contact-column">
+          <div class="group">Ryan Colone</div>
+          <a href="mailto:ryancolone59@gmail.com">ryancolone59@gmail.com</a>
+          
+          <div class="group">Agent David Krasner</div>
+          <a href="mailto:dkrasner@hendersonhogan.com">dkrasner@hendersonhogan.com</a>
+          
+          <div class="group">Agent Alex Butler</div>
+          <a href="mailto:abutler@hendersonhogan.com">abutler@hendersonhogan.com</a>
+          
+          <div class="group">Agency Assistant Annie Stein</div>
+          <a href="mailto:astein@hendersonhogan.com">astein@hendersonhogan.com</a>
+          
+          <div class="group">Manager Benjamin Carnegie</div>
+          <a href="mailto:bcarnegie@luberroklin.com">bcarnegie@luberroklin.com</a>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="contact-column">
+          <div class="group">Manager Jonathan Grace</div>
+          <a href="mailto:jgrace@luberroklin.com">jgrace@luberroklin.com</a>
+
+          <div class="group">Manager Assistant Mia Landman</div>
+          <a href="mailto:mlandman@luberroklin.com">mlandman@luberroklin.com</a>
+        </div>
+      </div>
     </div>
 
     <!-- Photo Column - Split into two stacked images -->
