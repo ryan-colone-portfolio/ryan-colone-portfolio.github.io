@@ -65,8 +65,6 @@
 
     .photo-album img {
       position: absolute;
-      width: 370px;
-      max-width: 48%;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -78,9 +76,29 @@
       z-index: 5;
     }
 
-    .img1 { top: 5%; left: 30%; transform: rotate(-6deg); }
-    .img2 { top: 35%; left: 5%; transform: rotate(0deg); }
-    .img3 { top: 65%; left: 30%; transform: rotate(3deg); }
+    .img1 { 
+      top: 5%; 
+      left: 30%; 
+      transform: rotate(-3deg);
+      width: 480px;  /* Bigger than default */
+      max-width: 65%;
+    }
+    
+    .img2 { 
+      top: 30%; 
+      left: 5%; 
+      transform: rotate(0deg);
+      width: 280px;  /* Smaller than default */
+      max-width: 40%;
+    }
+    
+    .img3 { 
+      top: 60%; 
+      left: 35%; 
+      transform: rotate(3deg);
+      width: 500px;  /* A bit bigger */
+      max-width: 58%;
+    }
 
     .navbar {
       z-index: 10;
@@ -112,16 +130,34 @@
 
       .photo-album img {
         position: absolute;
-        width: 320px;
-        max-width: 48%;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       }
 
-      .img1 { top: 43%; left: 34%; transform: rotate(-6deg); }
-      .img2 { top: 30%; left: 2%; transform: rotate(0deg); }
-      .img3 { top: 60%; left: 65%; transform: rotate(3deg); }
+      .img1 { 
+        top: 43%; 
+        left: 34%; 
+        transform: rotate(-6deg);
+        width: 420px;
+        max-width: 65%;
+      }
+      
+      .img2 { 
+        top: 30%; 
+        left: 2%; 
+        transform: rotate(0deg);
+        width: 240px;
+        max-width: 40%;
+      }
+      
+      .img3 { 
+        top: 60%; 
+        left: 65%; 
+        transform: rotate(3deg);
+        width: 320px;
+        max-width: 48%;
+      }
     }
 
     @media (max-width: 992px) {
@@ -145,8 +181,6 @@
 
       .photo-album img {
         position: absolute;
-        width: 320px;
-        max-width: 48%;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -156,9 +190,29 @@
 
       }
 
-      .img1 { top: 200%; left: 30%; transform: rotate(-6deg); }
-      .img2 { top: 30%; left: 2%; transform: rotate(0deg); }
-      .img3 { top: 60%; left: 62%; transform: rotate(3deg); }
+      .img1 { 
+        top: 200%; 
+        left: 30%; 
+        transform: rotate(-6deg);
+        width: 380px;
+        max-width: 65%;
+      }
+      
+      .img2 { 
+        top: 30%; 
+        left: 2%; 
+        transform: rotate(0deg);
+        width: 220px;
+        max-width: 40%;
+      }
+      
+      .img3 { 
+        top: 60%; 
+        left: 62%; 
+        transform: rotate(3deg);
+        width: 320px;
+        max-width: 48%;
+      }
     }
     
   </style>
@@ -203,8 +257,8 @@
     <!-- Image Collage -->
     <div class="image-box">
       <div class="photo-album">
-        <img src="../images/about/IMG_2339.jpg" class="img1" alt="On location">
-        <img src="../images/about/IMG_3410.jpeg" class="img2" alt="Studio">
+        <img src="../images/IMG_6936.jpg" class="img1" alt="On location">
+        <img src="../images/about/IMG_2339.jpg" class="img2" alt="Studio">
         <img src="../images/about/MixTapes-086.jpeg" class="img3" alt="Performance">
       </div>
     </div>
