@@ -136,27 +136,30 @@
       }
 
       .img1 { 
-        top: 43%; 
-        left: 34%; 
+        top: 60%; 
+        left: 3%; 
         transform: rotate(-6deg);
         width: 420px;
         max-width: 65%;
+        z-index: 3;
       }
       
       .img2 { 
-        top: 30%; 
-        left: 2%; 
+        top: 210%; 
+        left: 38%; 
         transform: rotate(0deg);
-        width: 240px;
+        width: 280px;
         max-width: 40%;
+        z-index: 2;
       }
       
       .img3 { 
-        top: 60%; 
-        left: 65%; 
+        top: 70%; 
+        left: 62%; 
         transform: rotate(3deg);
-        width: 320px;
+        width: 380px;
         max-width: 48%;
+        z-index: 1;
       }
     }
 
@@ -170,49 +173,39 @@
       .image-box {
         position: relative;
         height: auto;
-        min-height: 600px;
+        min-height: auto;
       }
 
       .photo-album {
         position: relative;
         padding: 2rem;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
 
       .photo-album img {
-        position: absolute;
+        position: relative !important;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
       }
+      
       .text-box h2 {
         font-size: 4rem;
-
-      }
-
-      .img1 { 
-        top: 200%; 
-        left: 30%; 
-        transform: rotate(-6deg);
-        width: 380px;
-        max-width: 65%;
       }
       
-      .img2 { 
-        top: 30%; 
-        left: 2%; 
-        transform: rotate(0deg);
-        width: 220px;
-        max-width: 40%;
-      }
-      
-      .img3 { 
-        top: 60%; 
-        left: 62%; 
-        transform: rotate(3deg);
-        width: 320px;
-        max-width: 48%;
-      }
+      /* Control the order of images - change these numbers to rearrange */
+      .img1 { order: 1; }  /* Currently first */
+      .img2 { order: 2; }  /* Currently second */
+      .img3 { order: 3; }  /* Currently third */
     }
     
   </style>
