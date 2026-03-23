@@ -85,20 +85,31 @@
       text-decoration: underline;
     }
 
-    /* right column unchanged */
+    /* right column - split into two stacked images */
     .contact-photo {
       flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact-photo-top {
+      flex: 1;
       background: url('../images/contact.jpeg') center/cover no-repeat;
       background-position: 50% 17%;
-
+    }
+    
+    .contact-photo-bottom {
+      flex: 1;
+      background: url('../images/about/IMG_3410.jpeg') center/cover no-repeat;
     }
 
     @media (max-width: 992px) {
       .contact-container {
         flex-direction: column;
       }
-      .contact-photo {
-        height: 400px;
+      .contact-photo-top,
+      .contact-photo-bottom {
+        height: 300px;
       }
       .contact-info h2 {
         font-size: 4rem;
@@ -150,8 +161,11 @@
       
     </div>
 
-    <!-- Photo Column -->
-    <div class="contact-photo"></div>
+    <!-- Photo Column - Split into two stacked images -->
+    <div class="contact-photo">
+      <div class="contact-photo-top"></div>
+      <div class="contact-photo-bottom"></div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
